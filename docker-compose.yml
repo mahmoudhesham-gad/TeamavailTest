@@ -1,0 +1,13 @@
+services:
+  node_app:
+    build: .
+    container_name: node
+    ports:
+      - "3000:3000"
+    volumes:
+      - node_data:/app/input/
+
+volumes:
+  node_data:
+    driver: local
+
